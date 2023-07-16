@@ -9,6 +9,10 @@ h1 {
   margin-bottom: 20px;
 }
 
+.edit-person-form {
+  width: 100%;
+}
+
 .data-table {
   width: 100%;
   border-collapse: collapse;
@@ -20,7 +24,7 @@ h1 {
   padding: 10px;
   background-color: #936025;
   font-weight: bold;
-  color:#f8f9fa;
+ 
 }
 
 .data-table td {
@@ -36,7 +40,16 @@ h1 {
   border: none;
   color: white;
   cursor: pointer;
+  background-color: #45a049;
 }
+.data-table td .deletbtn {
+  padding: 6px 12px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background-color: #e53935;
+}
+
 
 .data-table td button:hover {
   background-color: #45a049;
