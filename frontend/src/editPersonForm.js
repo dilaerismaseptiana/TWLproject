@@ -17,7 +17,7 @@ const EditPersonForm = ({ id, nama, kode, alamat, nomerTelepon, handleUpdate }) 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put('http://localhost:8080/persons/${id}', formData);
+      await axios.put(`https://tw-lproject.vercel.app/persons/${id}`, formData);
       handleUpdate(id, formData);
     } catch (error) {
       console.error('Error updating person data:', error);
@@ -29,18 +29,19 @@ const EditPersonForm = ({ id, nama, kode, alamat, nomerTelepon, handleUpdate }) 
   };
 
   return (
-    <tr>
+    <tr className="edit-person-form">
+
       <td>
-        <input type="text" name="nama" value={formData.nama} onChange={handleChange} />
+        <input type="text" name="nama" value={formData.nama} onChange={handleChange} className="edit-person-form-input" />
       </td>
       <td>
-        <input type="text" name="kode" value={formData.kode} onChange={handleChange} />
+        <input type="text" name="kode" value={formData.kode} onChange={handleChange} className="edit-person-form-input" />
       </td>
       <td>
-        <input type="text" name="alamat" value={formData.alamat} onChange={handleChange} />
+        <input type="text" name="alamat" value={formData.alamat} onChange={handleChange} className="edit-person-form-input" />
       </td>
       <td>
-        <input type="text" name="nomerTelepon" value={formData.nomerTelepon} onChange={handleChange} />
+        <input type="text" name="nomerTelepon" value={formData.nomerTelepon} onChange={handleChange} className="edit-person-form-input" />
       </td>
       <td>
         <button type="submit" onClick={handleSubmit}>Update</button>
